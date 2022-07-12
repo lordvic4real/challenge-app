@@ -1,18 +1,19 @@
-export const transactions = [
+export const data = [
     {
-        "id": 1,
+        "transaction_id": 1,
         "address": "park lane street",
         "city":" Abuja",
-        "category": "Service",
+        "category": "Utility",
         "amount": 98.05,
         "date": "2022-02-28",
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
-        "name": "ConEd Bill Payment",
-        "type": "sales"
+        "name": "Bill Payment",
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 2,
+        "transaction_id": 2,
         "address": "park lane street",
         "city": "Abuja",
         "category": "Service",
@@ -21,10 +22,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 3,
+        "transaction_id": 3,
         "address": "park lane street",
         "city": "Abuja",
         "category": "Service",
@@ -33,10 +35,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 4,
+        "transaction_id": 4,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Service",
@@ -45,10 +48,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "successful"
     },
     {
-        "id": 5,
+        "transaction_id": 5,
         "address": "park lane street",
         "city": "Abuja",
         "category": "Service",
@@ -57,10 +61,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "successful"
     },
     {
-        "id": 6,
+        "transaction_id": 6,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Service",
@@ -69,10 +74,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 7,
+        "transaction_id": 7,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Service",
@@ -81,10 +87,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 8,
+        "transaction_id": 8,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Service",
@@ -93,10 +100,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 9,
+        "transaction_id": 9,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Electric",
@@ -105,22 +113,55 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 10,
+        "transaction_id": 10,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Service",
         "amount": 98.05,
         "date": "2022-02-28",
-        "datetime": "2022-02-28T11:00:00Z",
-        "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 11,
+        "transaction_id": 11,
+        "address": "park lane street",
+        "city":" Abuja",
+        "category": "Utilities",
+        "amount": 98.05,
+        "date": "2022-02-28",
+        "name": "ConEd Bill Payment",
+        "type": "sales",
+        "status": "pending"
+    },
+    {
+        "transaction_id": 12,
+        "address": "park lane street",
+        "city":" Abuja",
+        "category": "Utilities",
+        "amount": 98.05,
+        "date": "2022-02-28",
+        "name": "namecheap",
+        "type": "sales",
+        "status": "declined"
+    },
+    {
+        "transaction_id": 13,
+        "address": "park lane street",
+        "city":" Abuja",
+        "category": "Utilities",
+        "amount": 98.05,
+        "date": "2022-02-28",
+        "name": "ConEd Payment",
+        "type": "sales",
+        "status": "pending"
+    },
+    {
+        "transaction_id": 14,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Utilities",
@@ -129,10 +170,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 12,
+        "transaction_id": 15,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Utilities",
@@ -141,10 +183,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 13,
+        "transaction_id": 16,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Utilities",
@@ -153,46 +196,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
-    },
-    {
-        "id": 14,
-        "address": "park lane street",
-        "city":" Abuja",
-        "category": "Utilities",
-        "amount": 98.05,
-        "date": "2022-02-28",
-        "datetime": "2022-02-28T11:00:00Z",
-        "authorized_date": "2022-02-28",
-        "name": "ConEd Bill Payment",
-        "type": "sales"
-    },
-    {
-        "id": 15,
-        "address": "park lane street",
-        "city":" Abuja",
-        "category": "Utilities",
-        "amount": 98.05,
-        "date": "2022-02-28",
-        "datetime": "2022-02-28T11:00:00Z",
-        "authorized_date": "2022-02-28",
-        "name": "ConEd Bill Payment",
-        "type": "sales"
-    },
-    {
-        "id": 16,
-        "address": "park lane street",
-        "city":" Abuja",
-        "category": "Utilities",
-        "amount": 98.05,
-        "date": "2022-02-28",
-        "datetime": "2022-02-28T11:00:00Z",
-        "authorized_date": "2022-02-28",
-        "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
      },
      {
-        "id": 17,
+        "transaction_id": 17,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Utilities",
@@ -201,10 +209,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+         "type": "sales",
+         "status": "pending"
     },
     {
-        "id": 18,
+        "transaction_id": 18,
         "address": "park lane street",
         "city":" Abuja",
         "category": "Utilities",
@@ -213,10 +222,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 19,
+        "transaction_id": 19,
         "address": "park lane street",
         "city": "Abuja",
         "category": "Utilities",
@@ -225,10 +235,11 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
     },
     {
-        "id": 20,
+        "transaction_id": 20,
         "address": "park lane street",
         "city": "Abuja",
         "category": "Utilities",
@@ -237,6 +248,8 @@ export const transactions = [
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
         "name": "ConEd Bill Payment",
-        "type": "sales"
+        "type": "sales",
+        "status": "pending"
+        
      },
 ]
