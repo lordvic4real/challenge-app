@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState} from 'react'
 import styled from 'styled-components'
-// import { Transactions } from '../components/Transactions'
-import { data } from '../data/transaction'
+// import { data } from '../data/transaction'
+import { useQuery } from '@apollo/client';
+import { GET_USERS } from '../api/client';
+
+
 
 const Container = styled.div`
    background:inherit;
-   display: flex,
-   justify-items: center;
+   display: flex;
+   justify-content: center;
    flex-direction:column;
-   padding: 150px 0 100px 10%;
+   padding:  100px 10%;
   table {
     border-collapse: collapse;
     border: 2px solid rgb(200, 200, 200);
@@ -30,7 +33,7 @@ const Container = styled.div`
     background-color: #fafafa;
   }
   .input-container{
-    max-width:850px;
+    /* max-width:850px; */
     padding:30px;
   }
   input {
@@ -43,8 +46,10 @@ const Container = styled.div`
   transition: background-color 0.5s ease-out;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   border:none;
- 
+}
 
+filter-con h1{
+  text-align:left;
 }
 
 
@@ -52,15 +57,26 @@ const Container = styled.div`
 
 const TransactionDetail = () => {
   const [searchTerm, setSearchTerm] = useState('')
+  const [allUsers, setAllUsers] = useState([])
+  const {  loading: allUsersLoading,
+    error: allUsersError,
+    data: allUsersData, } = useQuery(GET_USERS);
+  
+    useEffect(() => {
+      if (allUsersData) {
+        setAllUsers(allUsersData?.users?.data);
+      }
+    }, [allUsersData]);
+  
+  console.log(allUsers)
 
-  useEffect(() => {
-     const filteredData = data?.filter((transactions) => transactions.name.toLowerCase().includes(searchTerm))
-    setSearchTerm(filteredData )
-  }, [])
   
   // console.log(data.filter(item => data[0].name.includes("bill")))
   return (
     <Container>
+      <div className='filter-con'>
+           <h1>filter by type or transaction status</h1>
+      </div>
       <div className="input-container">
         <input
           type="text"
@@ -71,25 +87,20 @@ const TransactionDetail = () => {
       <table>
         <thead>
           <tr>
-            <th style={{ color: 'darkred' }}> Date</th>
-            <th style={{ color: 'darkred' }}>Transaction Type</th>
             <th style={{ color: 'darkred' }}>Name</th>
-            <th style={{ color: 'darkred' }}>Status</th>
-            <th style={{ color: 'darkred' }}>Category</th>
-            <th style={{ color: 'darkred' }}>transaction Id</th>
+            <th style={{ color: 'darkred' }}>Company</th>
+            <th style={{ color: 'darkred' }}>Website</th>
+            <th style={{ color: 'darkred' }}>Username</th> 
           </tr>
         </thead>
         <tbody>
-          {data &&
-            data.filter((item) => (item.name && item.category && item.status).toLowerCase().includes(searchTerm))
-              .map(({ name, status, date, category, type, transaction_id, }) => (
-                <tr key={transaction_id}>
-                  <td>{date}</td>
-                  <td>{type}</td>
-                  <td>{name}</td>
-                  <td>{status}</td>
-                  <td>{category}</td>
-                  <td>{transaction_id}</td>
+          {allUsers &&
+            allUsers.map(({ name, id,company, website, username}) => (
+                <tr key={id}>
+                <td>{name}</td>
+                <td>{company?.name}</td>
+                <td>{website}</td>
+                <td>{username}</td>  
                 </tr>
               ))}
         </tbody>

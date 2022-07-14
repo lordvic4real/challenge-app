@@ -112,7 +112,7 @@ export const data = [
         "date": "2022-02-28",
         "datetime": "2022-02-28T11:00:00Z",
         "authorized_date": "2022-02-28",
-        "name": "ConEd Bill Payment",
+        "name": "Apple Pay",
         "type": "sales",
         "status": "pending"
     },
