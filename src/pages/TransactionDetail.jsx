@@ -66,21 +66,25 @@ const TransactionDetail = () => {
       if (allUsersData) {
         setAllUsers(allUsersData?.users?.data);
       }
-    }, [allUsersData]);
+   
+    }, [allUsersData, allUsersLoading, allUsersError]);
   
-  console.log(allUsers)
-
+    if (allUsersLoading) return <p>Loading...</p>;
+    if (allUsersError) return <p>Error :(</p>;
   
-  // console.log(data.filter(item => data[0].name.includes("bill")))
+    // const search = (allUsers) => {
+    //   return allUsers.filter((user) => user.name.toLowerCase().includes(searchTerm))
+    // }
+  
   return (
     <Container>
       <div className='filter-con'>
-           <h1>filter by type or transaction status</h1>
+           <h1>filter by name</h1>
       </div>
       <div className="input-container">
         <input
           type="text"
-          placeholder="search"
+          placeholder="search name...."
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
@@ -95,7 +99,7 @@ const TransactionDetail = () => {
         </thead>
         <tbody>
           {allUsers &&
-            allUsers.map(({ name, id,company, website, username}) => (
+            allUsers.filter((item) => item.name.toLowerCase().includes(searchTerm)).map(({ name, id,company, website, username}) => (
                 <tr key={id}>
                 <td>{name}</td>
                 <td>{company?.name}</td>
